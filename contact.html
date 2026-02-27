@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Farmhouse Frames</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container { padding: 60px 20px; text-align: center; max-width: 600px; margin: auto; }
+        .contact-box { background: white; padding: 30px; border: 1px solid #ddd; text-align: left; margin-top: 20px; }
+        label { font-weight: bold; text-transform: uppercase; font-size: 0.8rem; display: block; margin-top: 15px; }
+        input, textarea { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; box-sizing: border-box; font-family: sans-serif; }
+        button { background: #2c2c2c; color: white; padding: 15px; border: none; width: 100%; margin-top: 20px; cursor: pointer; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; }
+        button:hover { background: #8b0000; }
+    </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<script>
+    fetch('nav.html').then(res => res.text()).then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
+</script>
+
+<div class="container">
+    <h1>Custom Requests</h1>
+    <p><i>Where the Backroads Meet.</i> Inquire about custom sizes or specific Kentucky locations you'd like captured.</p>
+    
+    <div class="contact-box">
+        <form action="https://formspree.io/f/your-id" method="POST">
+            <label>Name</label>
+            <input type="text" name="name" required placeholder="Your Name">
+            
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="Your Email">
+            
+            <label>Message</label>
+            <textarea name="message" rows="5" required placeholder="Tell me about the piece you're looking for..."></textarea>
+            
+            <button type="submit">Send Request</button>
+        </form>
+    </div>
+</div>
+
+<footer style="background: #2c2c2c; color: white; padding: 25px; text-align: center; margin-top: 50px;">
+    &copy; 2026 Farmhouse Frames | Authentic Local Art
+</footer>
+
+</body>
+</html>
