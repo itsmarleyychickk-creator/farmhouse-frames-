@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Art | Farmhouse Frames</title>
+    <title>Shop | Farmhouse Frames</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { margin: 0; background-color: #f9f9f7; }
+        .store-frame {
+            width: 100%;
+            height: calc(100vh - 60px); /* Adjusts for the height of your nav bar */
+            border: none;
+        }
+    </style>
 </head>
 <body>
 
-<div id="nav-placeholder"></div>
-<script>
-    fetch('nav.html').then(res => res.text()).then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
-</script>
+    <div id="nav-placeholder"></div>
 
-<div style="padding: 60px 20px; text-align: center; max-width: 1200px; margin: auto;">
-    <h1>The Collection</h1>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px;">
-        <div style="background: white; border: 1px solid #ddd; padding: 15px; text-align: left;">
-            <img src="banner.jpg" style="width: 100%; height: auto;">
-            <h3>"Riverbed Shadows"</h3>
-            <p style="font-weight: bold; color: #8b0000;">From $45.00</p>
-            <a href="#" style="background: #2c2c2c; color: white; padding: 10px; display: block; text-align: center; text-decoration: none; text-transform: uppercase; font-size: 0.8rem;">View Product</a>
-        </div>
-        <div style="background: white; border: 1px solid #ddd; padding: 15px; text-align: left;">
-            <img src="barn.jpg" style="width: 100%; height: auto;">
-            <h3>"Winter in the Bluegrass"</h3>
-            <p style="font-weight: bold; color: #8b0000;">From $45.00</p>
-            <a href="#" style="background: #2c2c2c; color: white; padding: 10px; display: block; text-align: center; text-decoration: none; text-transform: uppercase; font-size: 0.8rem;">View Product</a>
-        </div>
-    </div>
-</div>
+    <iframe src="https://admin.fitprint.io/printify-products-v2.html?shop=872c25aa-7d66-4b31-b33c-cc8fd93bdde1" class="store-frame"></iframe>
+
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>
