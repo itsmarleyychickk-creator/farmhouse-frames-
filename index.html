@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmhouse Frames | Kentucky Photography</title>
+    <title>Farmhouse Frames | Photography</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="nav-placeholder"></div>
-<script>
-    fetch('nav.html').then(res => res.text()).then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
-</script>
+    <div id="nav-placeholder"></div>
 
-<header style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('banner.jpg') no-repeat center center; background-size: cover; height: 70vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
-    <div>
-        <h1 style="font-size: 3.5rem; text-shadow: 3px 3px 10px rgba(0,0,0,0.7);">Farmhouse Frames</h1>
-        <p style="font-style: italic; font-size: 1.4rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Where the Backroads Meet. Local Photography.</p>
-    </div>
-</header>
+    <header class="hero">
+        <h1>Farmhouse Frames</h1>
+        <p>Capturing the rustic soul of Kentucky</p>
+    </header>
 
-<div style="padding: 60px 20px; text-align: center; max-width: 800px; margin: auto;">
-    <h2>The Riverbed Collection</h2>
-    <p>Authentic nature photography capturing the raw beauty of the Trigg County landscape. Each piece is hand-selected to bring the peace of the Kentucky countryside into your home.</p>
-</div>
+    <main class="container">
+        <h2>Welcome to the Gallery</h2>
+        <p>Explore our collection of fine art photography and custom canvases.</p>
+        <a href="gallery.html" class="buy-btn">Shop the Collection</a>
+    </main>
 
-<footer style="background: #2c2c2c; color: white; padding: 25px; text-align: center;">&copy; 2026 Farmhouse Frames</footer>
+    <script>
+        // Only one fetch script is needed!
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>
